@@ -1,46 +1,27 @@
-# graphqlbook-store
+<div align="center">
+  <h2> Book Recorder </h2>
+[![Netlify Status](https://api.netlify.com/api/v1/badges/86933b71-e9fe-4d90-9100-470860e5379d/deploy-status)](https://app.netlify.com/sites/netty-finder/deploys)
+[![Pull Requests Welcome](https://img.shields.io/badge/PRs-welcome-red.svg?style=flat)](http://makeapullrequest.com)
+[![Made in Nigeria](https://img.shields.io/badge/made%20in-nigeria-008751.svg?style=flat-square)](https://github.com/acekyd/made-in-nigeria)
+[![Open Source Helpers](https://www.codetriage.com/bolajiayodeji/netty-finder/badges/users.svg)](https://www.codetriage.com/bolajiayodeji/netty-finder)
+[![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors)
+
+</div>
+
+
 Built a book store app with GraphQL API running on Hasura.io Engine and Vue Apollo Client.
 
-## Installation
-```
-  git clone https://github.com/Umoren/graphqlbook-store.git
-```
 
-## Project setup
-```
-npm install
-yarn 
-```
+# Installation and Contributors Guide
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-yarn serve
-```
+See [here](https://github.com/BolajiAyodeji/netty-finder/blob/master/CONTRIBUTING.md)
 
-### Compiles and minifies for production
-```
-npm run build
-yarn build
-```
+# License
 
-### Run your tests
-```
-npm run test
-```
+This project is open source and available under the [MIT License](https://github.com/Umoren/graphqlbook-store/blob/master/LICENSE).
 
-### Lints and fixes files
-```
-npm run lint
-yarn lint
-```
-## Contributors Guide
+# Author
 
+Umoren Samuel
 
-## Want to contribute ?
-
-> fork this project, clone and make your changes and send a Pull Request
-
-## License
-
-This project is open source and available under the MIT License.
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
