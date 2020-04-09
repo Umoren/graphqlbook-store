@@ -1,5 +1,10 @@
 # graphqlbook-store
-Built a book store app with GraphQL API running on Hasura.io Engine and Apollo GraphQl. More details soon. 
+Built a book store app with GraphQL API running on Hasura.io Engine and Apollo GraphQl.
+
+## Installation
+```
+  git clone https://github.com/Umoren/graphqlbook-store.git
+```
 
 ## Project setup
 ```
@@ -29,7 +34,6 @@ npm run test
 npm run lint
 yarn lint
 ```
+## Want to contribute ?
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
+> fork this project, clone and make your changes and send a Pull Request
