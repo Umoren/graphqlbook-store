@@ -1,6 +1,6 @@
 <template name="all-books" :key="componentKey">
     <div class="allBooks">
-        <router-link to="/addbook" class="btn btn-primary btn-sm mb-3 " > Add Book  </router-link>
+        <router-link to="/addbook" class="btn btn-primary mx-auto mb-3 " > Add Book  </router-link>
         <ApolloQuery 
             :query=" gql => gql`
             query allBooks{
@@ -88,9 +88,10 @@ export const ALL_BOOKS = gql `
 
 export default {
   name: 'AllBooks',
-  data () {
-      
-  }
+  
+  created () {
+      this.forceRefresh();
+  },
   methods: {
  
    async removeBook(book){
@@ -106,6 +107,10 @@ export default {
           
         ]
       })
+    },
+
+    forceRefresh(){
+        this.$forceUpdate();
     }
   }
  
