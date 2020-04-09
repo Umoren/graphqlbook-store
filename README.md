@@ -34,6 +34,13 @@ npm run test
 npm run lint
 yarn lint
 ```
+## Contributors Guide
+
+
 ## Want to contribute ?
 
 > fork this project, clone and make your changes and send a Pull Request
+
+## License
+
+This project is open source and available under the MIT License.
