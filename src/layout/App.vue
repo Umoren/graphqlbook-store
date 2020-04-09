@@ -18,9 +18,19 @@
         </div>
       </div>
     </section>
+
+    <Footer />
   </div>
 </template>
 
+<script>
+import Footer from './_partials/footer';
+export default {
+  components : {
+    Footer
+  }
+}
+</script>
 
 <style >
    @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;1,400&display=swap');
@@ -37,9 +47,9 @@
     }
 
     .overlay{
-      margin: 10px;
+      margin: 30px;
       background: rgb(20, 20, 20);
-      
+      /* width: 100%; */
       padding: 1em;
       border-radius: 10px;
       color: rgba(248, 248, 248, 0.8);

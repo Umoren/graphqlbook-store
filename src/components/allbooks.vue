@@ -1,6 +1,8 @@
 <template name="all-books" :key="componentKey">
     <div class="allBooks">
-        <router-link to="/addbook" class="btn btn-primary  mb-3 " > Add Book  </router-link>
+        <div class="text-center">
+            <router-link to="/addbook" class="btn btn-outline-danger text-white  mb-3 " > Add New Book  </router-link>
+        </div>
         <ApolloQuery 
             :query=" gql => gql`
             query allBooks{
