@@ -1,6 +1,6 @@
 <template name="all-books" :key="componentKey">
     <div class="allBooks">
-        <router-link to="/addbook" class="btn btn-primary mx-auto mb-3 " > Add Book  </router-link>
+        <router-link to="/addbook" class="btn btn-primary  mb-3 " > Add Book  </router-link>
         <ApolloQuery 
             :query=" gql => gql`
             query allBooks{
@@ -88,9 +88,15 @@ export const ALL_BOOKS = gql `
 
 export default {
   name: 'AllBooks',
-  
-  created () {
-      this.forceRefresh();
+
+  mounted(){
+      this.forceRerender();
+  },
+
+  data(){
+      return{
+          componentKey: 0
+      }
   },
   methods: {
  
@@ -109,8 +115,8 @@ export default {
       })
     },
 
-    forceRefresh(){
-        this.$forceUpdate();
+    forceRerender() {
+      this.componentKey += 1;  
     }
   }
  
