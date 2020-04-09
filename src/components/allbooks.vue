@@ -1,4 +1,4 @@
-<template name="component-name">
+<template name="all-books" :key="componentKey">
     <div class="allBooks">
         <router-link to="/addbook" class="btn btn-primary btn-sm mb-3 " > Add Book  </router-link>
         <ApolloQuery 
@@ -28,7 +28,7 @@
                 <div v-if="data" >
                 
                     <div class="row"  > 
-                        <div v-for="book in data.books" class="col-md-4 col-sm-12 col-lg-3 col-xl-3 " :key="book.id"> 
+                        <div v-for="book in data.books" class="col-md-4 col-sm-12 col-lg-4 col-xl-4 " :key="book.id"> 
                             <div class="card shadow-lg  bg-danger mb-3">
                                 <div class="card-body ">
                                     
@@ -88,18 +88,13 @@ export const ALL_BOOKS = gql `
 
 export default {
   name: 'AllBooks',
-  
-
-
-   filters: {
-       readMore (text, length, suffix){
-           return text.substring(0, length) + suffix
-       }
-   },
+  data () {
+      
+  }
   methods: {
  
-    removeBook(book){
-    this.$apollo.mutate({
+   async removeBook(book){
+    await this.$apollo.mutate({
         mutation: REMOVE_BOOK,
         variables: {
           id: book.id

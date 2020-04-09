@@ -10,6 +10,16 @@
                     v-model="newTitle"
                 />
             </div>
+
+            <div class="mb-3">
+                <label for="title"> Author: </label>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    placeholder="Who wrote this book"
+                    v-model="newAuthor"
+                />
+            </div>
        
             <div>
                 <label for="description"> Book Description</label>
@@ -31,16 +41,18 @@
     import { ALL_BOOKS } from './allbooks.vue';
 
      const ADD_BOOKS = gql`
-        mutation ($title: String!, $description: String!) {
-        insert_books(objects: {title: $title, description: $description}) {
+        mutation ($title: String!, $description: String!, $written_by: String!) {
+        insert_books(objects: {title: $title, description: $description, written_by: $written_by}) {
             affected_rows
             returning {
                 id
                 title
                 description
                 created_at
+                written_by
             }
         }
+
     }`;
 
    
@@ -50,19 +62,22 @@
         data() {
             return {
                 newTitle: '',
-                newDesc: ''
+                newDesc: '',
+                newAuthor: ''
             }
         },
         methods:{
-            addBook() {
+            async addBook() {
                 // const { newTitle, newDesc } = this.$data;
                 const title = this.newTitle && this.newTitle.trim();
                 const description= this.newDesc && this.newDesc.trim() ;
-                this.$apollo.mutate({
+                const written_by = this.newAuthor && this.newAuthor.trim() ;
+                await this.$apollo.mutate({
                     mutation: ADD_BOOKS,
                     variables: {    
                         description,
-                        title
+                        title,
+                        written_by
                     },
                     update: (cache, { data: { insert_books}}) => {
                         // Read data from cache for this query
@@ -82,8 +97,10 @@
                 }).then(() => {
                     this.$router.push({path: '/'})
                 }).catch(err => console.log(err));
+
                 this.newTitle = '';
                 this.newDesc = '';
+                this.newAuthor = '';
             },
 
         
