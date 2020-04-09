@@ -9,7 +9,7 @@
 
 # Installation and Contributors Guide
 
-See [here](https://github.com/BolajiAyodeji/netty-finder/blob/master/CONTRIBUTING.md)
+See [here](https://github.com/Umoren/graphqlbook-store/blob/master/CONTRIBUTING.md)
 
 # License
 
