@@ -1,0 +1,6 @@
+mutation deleteTodo ($id: Int!){
+  delete_books(where; {id: {_eq: $id}}){
+    affected_rows
+  }
+}
+  

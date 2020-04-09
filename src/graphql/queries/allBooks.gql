@@ -1,0 +1,12 @@
+query allBooks{
+  books{
+    id
+    title
+    description
+    is_completed
+    author{
+      id
+      name
+    }
+  }
+}
