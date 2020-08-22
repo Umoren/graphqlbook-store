@@ -13,7 +13,7 @@ import gql from 'graphql-tag';
 
 const apolloProvider = new VueApollo({
   defaultClient : new ApolloClient({
-    uri: 'https://book-recorder.herokuapp.com/v1/graphql'
+    uri: 'https://tender-meerkat-56.hasura.app/v1/graphql'
   })
 })
 

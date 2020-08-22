@@ -19,14 +19,11 @@
             :variables="{
                 limit: $options.pageSize
             }"
-            >
-          
+            >          
             <template v-slot="{ result: { loading, error, data } }">
                 <div v-if="loading" class="loading apollo"> Loading ...</div>
 
-                <div v-else-if="error"> Oh Yikes :) </div>
-
-                
+                <div v-else-if="error"> Oh Yikes :) </div>               
                 <div v-if="data" >
                 
                     <div class="row"  > 
@@ -45,11 +42,7 @@
                                         <button class="btn btn-sm btn-dark" @click="removeBook(book)"> delete book</button>
                                 </div>
                             </div>
-                            
-                            <!-- <small> {{book.is_completed}}</small> -->
-
-
-                            </div>
+                      </div>
                         </div>
                     </div>
                     
@@ -70,6 +63,7 @@ const REMOVE_BOOK = gql `
     affected_rows
   }
 }
+
   
 `;
 

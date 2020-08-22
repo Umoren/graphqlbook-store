@@ -7,7 +7,6 @@ const ADD_BOOKS = gql `
       title
       description
       created_at
-      is_completed
     }
   }
 }

@@ -19,18 +19,9 @@
       </div>
     </section>
 
-    <Footer />
   </div>
 </template>
 
-<script>
-import Footer from './_partials/footer';
-export default {
-  components : {
-    Footer
-  }
-}
-</script>
 
 <style >
    @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;1,400&display=swap');
